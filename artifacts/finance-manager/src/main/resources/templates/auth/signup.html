@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Create your account — folio</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body class="auth-page">
+<div class="auth-art"><div class="auth-brand"><span class="brand-mark">F</span>folio<span class="brand-dot">.</span></div><div class="auth-art-copy"><span class="eyebrow">A BETTER VIEW OF YOUR MONEY</span><h1>Small choices.<br><em>Big picture.</em></h1><p>Bring the everyday details together and make decisions with confidence.</p></div><div class="auth-art-footer"><span>YOUR PERSONAL FINANCE SPACE</span><span>01 / 01</span></div></div>
+<main class="auth-main"><div class="auth-mobile-brand"><span class="brand-mark">F</span>folio<span class="brand-dot">.</span></div><div class="auth-form-wrap">
+  <span class="eyebrow">GET STARTED</span><h2>Create your account</h2><p class="auth-subtitle">A few details, then your finances have a home.</p>
+  <form th:action="@{/signup}" th:object="${form}" method="post" class="form-stack">
+    <label>Your name<input th:field="*{name}" autocomplete="name" placeholder="Alex Morgan" required><small th:errors="*{name}"></small></label>
+    <label>Username<input th:field="*{username}" autocomplete="username" placeholder="alexmorgan" required><small th:errors="*{username}"></small></label>
+    <label>Email address<input th:field="*{email}" type="email" autocomplete="email" placeholder="you@example.com" required><small th:errors="*{email}"></small></label>
+    <div class="form-two"><label>Password<input th:field="*{password}" type="password" autocomplete="new-password" placeholder="At least 8 characters" required><small th:errors="*{password}"></small></label><label>Confirm password<input th:field="*{confirmPassword}" type="password" autocomplete="new-password" placeholder="Repeat password" required><small th:errors="*{confirmPassword}"></small></label></div>
+    <button class="button button-dark button-wide" type="submit">Create account <span>→</span></button>
+  </form><p class="auth-switch">Already have an account? <a th:href="@{/login}">Sign in</a></p></div><div class="auth-copyright">PRIVATE BY DESIGN <span>•</span> BUILT FOR CLARITY</div></main>
+</body></html>

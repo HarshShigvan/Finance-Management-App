@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Welcome back — folio</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body class="auth-page">
+<div class="auth-art">
+  <div class="auth-brand"><span class="brand-mark">F</span>folio<span class="brand-dot">.</span></div>
+  <div class="auth-art-copy"><span class="eyebrow">YOUR MONEY, MORE INTENTIONAL</span><h1>Make room for<br><em>what matters.</em></h1><p>A calmer, clearer way to understand your spending and build better habits.</p></div>
+  <div class="auth-art-footer"><span>YOUR PERSONAL FINANCE SPACE</span><span>01 / 01</span></div>
+</div>
+<main class="auth-main">
+  <div class="auth-mobile-brand"><span class="brand-mark">F</span>folio<span class="brand-dot">.</span></div>
+  <div class="auth-form-wrap">
+    <span class="eyebrow">WELCOME BACK</span><h2>Sign in to folio</h2><p class="auth-subtitle">Your finances are right where you left them.</p>
+    <div class="auth-alert" th:if="${error}" th:text="${error}"></div>
+    <div class="auth-alert success" th:if="${param.logout}">You have signed out successfully.</div>
+    <form th:action="@{/login}" method="post" class="form-stack">
+      <label>Email or username<input name="identity" type="text" autocomplete="username" placeholder="you@example.com" required th:value="${identity}"></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></label>
+      <button class="button button-dark button-wide" type="submit">Sign in <span>→</span></button>
+    </form>
+    <div class="demo-login"><div><span class="demo-badge">DEMO</span><strong>Just looking around?</strong></div><p>Use the viewer account to explore the sample workspace.</p><div class="demo-credentials"><span>viewer@demo.com</span><span>viewer123</span></div><form th:action="@{/login}" method="post"><input type="hidden" name="identity" value="viewer@demo.com"><input type="hidden" name="password" value="viewer123"><button type="submit" class="text-button">Enter demo workspace ↗</button></form></div>
+    <p class="auth-switch">New to folio? <a th:href="@{/signup}">Create an account</a></p>
+  </div>
+  <div class="auth-copyright">PRIVATE BY DESIGN <span>•</span> BUILT FOR CLARITY</div>
+</main>
+</body></html>

@@ -1,0 +1,11 @@
+.trend-panel,.budget-performance{padding:18px;margin-top:13px}
+.trend-chart{height:148px;display:flex;align-items:stretch;gap:12px;padding:12px 7px 0;border-bottom:1px solid #eff0ec}
+.trend-month{height:100%;flex:1;min-width:28px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px;color:#8b8d85;font:8px var(--mono)}
+.trend-bars{width:100%;flex:1;display:flex;align-items:flex-end;justify-content:center;gap:4px;max-width:46px}
+.trend-bars i{display:block;width:11px;min-height:2px;border-radius:4px 4px 0 0}
+.trend-income-bar{background:#98c766}
+.trend-expense-bar{background:#db897d}
+.budget-performance .table-wrap{overflow-x:auto}
+.budget-performance table{min-width:570px}
+.budget-performance td{font-size:9px}
+@media(max-width:640px){.trend-panel,.budget-performance{padding:13px;margin-top:9px}.trend-chart{height:130px;gap:4px;padding-inline:0}.trend-bars{gap:2px}.trend-bars i{width:8px}.budget-performance .panel-heading{align-items:flex-start;gap:8px}.budget-performance .quiet-link{white-space:nowrap}}

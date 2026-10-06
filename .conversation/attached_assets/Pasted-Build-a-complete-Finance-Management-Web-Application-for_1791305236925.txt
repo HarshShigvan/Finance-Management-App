@@ -1,0 +1,504 @@
+Build a complete **Finance Management Web Application** for my college project.
+
+## MAIN REQUIREMENT
+
+The project must be **primarily developed in JAVA**.
+
+Use:
+
+* **Java**
+* **Spring Boot**
+* **Spring MVC**
+* **Spring Data JPA**
+* **MySQL**
+* **Thymeleaf**
+* Maven
+
+HTML and CSS can be used for the frontend UI, but keep them limited to presentation and layout. Use only minimal JavaScript where absolutely necessary.
+
+**Do NOT use React, Node.js, Express, Python, PHP, Supabase, Firebase, or any other backend technology.**
+
+The main application logic, authentication, calculations, CRUD operations, validations, database operations, reports, budgets, transactions, and business logic must be handled using **Java + Spring Boot**.
+
+The project should be easy to run directly on **Replit**.
+
+---
+
+# WEBSITE TYPE
+
+Create a modern **Personal Finance Management Dashboard** where users can manage their income, expenses, transactions, budgets, reports, and profile.
+
+The website should look like a polished real-world finance application and should be suitable for a **college project demonstration**.
+
+The overall visual style should be:
+
+* Rich black and white UI
+* Premium and minimal look
+* Clean modern dashboard
+* Black/dark backgrounds
+* White/light cards and text where appropriate
+* Sharp but elegant borders
+* Professional typography
+* Plenty of spacing
+* Minimal unnecessary colors
+* Use green/red only when necessary for financial indicators such as income and expenses
+* Responsive design for desktop and mobile
+
+Do not make it look like a generic basic college project.
+
+---
+
+# AUTHENTICATION
+
+Create a very simple authentication system.
+
+Pages:
+
+* Login
+* Sign Up
+* Logout
+
+Requirements:
+
+* No OTP
+* No email verification
+* No phone verification
+* No complicated authentication
+* Simple username/email + password login
+* Password validation
+* Session-based authentication is enough
+
+Also create a **Demo Viewer Account** so that the project can easily be demonstrated in college.
+
+For example:
+
+Viewer Login:
+Email: [viewer@demo.com](mailto:viewer@demo.com)
+Password: viewer123
+
+The demo viewer should be able to open the dashboard and view realistic sample finance data.
+
+Also allow a normal user to:
+
+* Sign Up
+* Login
+* Logout
+* Manage their own finance data
+
+Make Login and Logout very simple and reliable.
+
+---
+
+# NAVIGATION / MAIN SECTIONS
+
+After login, create a sidebar or modern navigation menu with:
+
+1. Dashboard
+2. Transactions
+3. Budget
+4. Reports
+5. Profile
+6. Settings
+7. Logout
+
+The navigation should be consistent across all pages.
+
+---
+
+# 1. DASHBOARD
+
+Create a professional finance dashboard.
+
+Show summary cards such as:
+
+* Total Balance
+* Total Income
+* Total Expenses
+* Current Month Income
+* Current Month Expenses
+* Savings
+* Budget Remaining
+
+Show recent transactions.
+
+Show useful financial information such as:
+
+* Income vs Expense
+* Spending summary
+* Current balance
+* Budget usage
+
+Include simple visual charts if possible, but do not make JavaScript unnecessarily complex.
+
+The dashboard should automatically calculate values from the database.
+
+Example:
+
+Total Balance = Total Income - Total Expenses
+
+Display positive and negative financial values clearly.
+
+Use realistic demo data for the viewer account.
+
+---
+
+# 2. TRANSACTIONS
+
+Create a complete transaction management page.
+
+Allow users to:
+
+* Add transaction
+* Edit transaction
+* Delete transaction
+* View transactions
+* Search transactions
+* Filter transactions
+
+Each transaction should contain:
+
+* Transaction ID
+* Title / Description
+* Amount
+* Type: Income or Expense
+* Category
+* Date
+* Payment Method
+* Notes
+* User
+
+Suggested categories:
+
+Income:
+
+* Salary
+* Freelance
+* Business
+* Bonus
+* Other Income
+
+Expense:
+
+* Food
+* Shopping
+* Rent
+* Bills
+* Transport
+* Entertainment
+* Education
+* Healthcare
+* Travel
+* Other Expense
+
+Suggested payment methods:
+
+* Cash
+* Bank Transfer
+* UPI
+* Credit Card
+* Debit Card
+
+Show transactions in a clean table.
+
+Use Java Spring Boot for all transaction CRUD operations.
+
+---
+
+# 3. BUDGET
+
+Create a Budget Management page.
+
+Allow users to:
+
+* Create budget
+* Edit budget
+* Delete budget
+* View budget
+* Set monthly/category budgets
+
+Example categories:
+
+* Food
+* Transport
+* Shopping
+* Bills
+* Entertainment
+* Education
+* Healthcare
+* Travel
+
+Show:
+
+* Budget limit
+* Amount spent
+* Remaining amount
+* Percentage used
+* Budget status
+
+Example statuses:
+
+* Safe
+* Near Limit
+* Exceeded
+
+Calculate these values using Java.
+
+Example:
+
+Remaining Budget = Budget Limit - Amount Spent
+
+Percentage Used = Amount Spent / Budget Limit × 100
+
+Use simple progress indicators.
+
+---
+
+# 4. REPORTS
+
+Create a Reports section for financial analysis.
+
+Reports should include:
+
+* Monthly Income Report
+* Monthly Expense Report
+* Monthly Savings
+* Category-wise Expenses
+* Income vs Expense
+* Spending Trends
+* Budget Performance
+
+Allow the user to select a month or date range.
+
+Display summary information in a clear way.
+
+Example:
+
+January:
+Income: ₹50,000
+Expenses: ₹32,000
+Savings: ₹18,000
+
+Category example:
+
+Food: ₹5,000
+Rent: ₹12,000
+Transport: ₹3,000
+Shopping: ₹4,000
+Bills: ₹8,000
+
+All calculations should primarily be handled in Java.
+
+Create simple charts only where useful.
+
+---
+
+# 5. PROFILE
+
+Create a Profile page.
+
+Show:
+
+* Name
+* Email
+* Username
+* Phone number (optional)
+* Account creation date
+
+Allow the user to edit basic profile information.
+
+The profile should be linked to the logged-in user.
+
+---
+
+# 6. SETTINGS
+
+Create a simple Settings page.
+
+Include:
+
+* Account settings
+* Change password
+* Currency preference
+* Notification preference
+* Basic application preferences
+
+Keep settings simple because this is a college project.
+
+Do not introduce unnecessary external services.
+
+---
+
+# DATABASE
+
+Use **MySQL** with Spring Data JPA.
+
+Create suitable entities/tables such as:
+
+* users
+* transactions
+* budgets
+* categories if required
+
+Relationships should be properly designed.
+
+A user should only be able to access their own transactions and budgets.
+
+Use proper primary keys and foreign keys where appropriate.
+
+---
+
+# JAVA PROJECT STRUCTURE
+
+Use a clean Spring Boot architecture.
+
+Suggested structure:
+
+src/main/java/
+controller/
+service/
+repository/
+entity/
+config/
+
+src/main/resources/
+templates/
+static/
+css/
+js/
+
+Use:
+
+* Controllers for HTTP requests
+* Services for business logic
+* Repositories for database operations
+* Entities for database models
+* Thymeleaf for server-side HTML rendering
+
+Keep the architecture clean and easy for a student to understand.
+
+---
+
+# UI / DESIGN
+
+The UI should be inspired by a modern premium finance dashboard.
+
+Use a:
+
+**Rich Black + White + Minimal Accent** design.
+
+Important visual requirements:
+
+* Dark black sidebar
+* Black/dark dashboard background
+* White or dark-gray cards with strong contrast
+* White typography
+* Clean icons
+* Rounded but professional cards
+* Thin borders
+* Modern buttons
+* Clean tables
+* Good spacing
+* Responsive layout
+
+The interface should feel similar to a modern SaaS finance application, not an old-style Java college project.
+
+Use CSS for most visual styling.
+
+Keep JavaScript minimal.
+
+---
+
+# DEMO DATA
+
+Create realistic sample data for the demo viewer account.
+
+Include enough data so that:
+
+* Dashboard looks populated
+* Transactions page has multiple transactions
+* Budget page has active budgets
+* Reports contain meaningful values
+* Charts/summary sections are not empty
+
+For example, include several months of transaction data.
+
+Do not use unrealistic random numbers everywhere.
+
+---
+
+# USER EXPERIENCE
+
+The application should have:
+
+* Easy navigation
+* Clear buttons
+* Form validation
+* Success/error messages
+* Empty-state messages when there is no data
+* Confirmation before deletion
+* Simple login/logout flow
+* Responsive design
+
+Do not require OTP, email verification, external authentication providers, or complicated deployment services.
+
+---
+
+# IMPORTANT COLLEGE PROJECT REQUIREMENT
+
+This is a **JAVA college project**.
+
+Therefore:
+
+**Java must be the primary programming language and main application technology.**
+
+Business logic should NOT be moved into JavaScript.
+
+Calculations such as:
+
+* Balance
+* Income
+* Expenses
+* Savings
+* Budget remaining
+* Budget percentage
+* Monthly summaries
+* Report calculations
+
+should primarily be implemented in **Java/Spring Boot**.
+
+HTML/CSS should mainly be used for displaying the interface.
+
+JavaScript should be used only when necessary for small UI interactions.
+
+---
+
+# FINAL REQUIREMENTS
+
+Generate the complete working project.
+
+Provide:
+
+1. Complete Java Spring Boot source code
+2. Thymeleaf HTML templates
+3. CSS styling
+4. Minimal JavaScript
+5. MySQL database configuration
+6. JPA entities
+7. Controllers
+8. Services
+9. Repositories
+10. Authentication logic
+11. Demo viewer account
+12. Sample finance data
+13. README with setup instructions
+14. Replit-compatible configuration
+
+Make sure there are **no placeholder pages** and no major missing functionality.
+
+The application should run successfully in Replit and the main features should work end-to-end.
+
+Before finishing, test the main flows:
+
+Sign Up → Login → Dashboard → Add Transaction → Edit/Delete Transaction → Budget → Reports → Profile → Settings → Logout.
+
+Make the final result polished, functional, and suitable for a **college project demonstration**.

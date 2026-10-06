@@ -1,0 +1,1 @@
+- [Java runtime compatibility](java-runtime.md) — target Java 17 with the current GraalVM 19 module.
