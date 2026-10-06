@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "folio Finance Manager"
+description = "A personal finance manager served by the existing Java Spring Boot and Thymeleaf application, with transaction tracking, budgets, reports, and account settings."
+version = "1.0.0"
+id = "artifacts/folio-finance"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18800
+
+[services.development]
+run = "cd ../finance-manager && mvn spring-boot:run"
+
+[services.production.build]
+args = ["mvn", "-f", "../finance-manager/pom.xml", "-DskipTests", "package"]
+
+[services.production.run]
+args = ["java", "-jar", "../finance-manager/target/finance-manager-1.0.0.jar"]
+
+[services.production.run.env]
+PORT = "18800"
+
+[services.production.health.startup]
+path = "/health"
+
+[services.env]
+PORT = "18800"
+BASE_PATH = "/"

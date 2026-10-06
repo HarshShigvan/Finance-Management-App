@@ -23,7 +23,7 @@
       <div class="comparison-row"><span>Income</span><strong class="positive-copy" th:text="${currentUser.currency + ' ' + #numbers.formatDecimal(summary.monthIncome, 1, 'COMMA', 0, 'POINT')}">₹ 60,500</strong></div>
       <div class="bar-track"><div class="bar-fill income-fill" th:style="'width:' + (${summary.monthIncome.signum() == 0} ? 0 : 100) + '%'"></div></div>
       <div class="comparison-row"><span>Expenses</span><strong class="expense-copy" th:text="${currentUser.currency + ' ' + #numbers.formatDecimal(summary.monthExpenses, 1, 'COMMA', 0, 'POINT')}">₹ 24,179</strong></div>
-      <div class="bar-track"><div class="bar-fill expense-fill" th:style="'width:' + (${summary.monthIncome.signum() == 0} ? 0 : ${summary.monthExpenses.multiply(T(java.math.BigDecimal).valueOf(100)).divide(summary.monthIncome.max(T(java.math.BigDecimal).ONE), 0, T(java.math.RoundingMode).HALF_UP)}) + '%'"></div></div>
+      <div class="bar-track"><div class="bar-fill expense-fill" th:style="'width:' + (${summary.monthIncome.signum() == 0} ? 0 : ${summary.monthExpenses.multiply(T(java.math.BigDecimal).valueOf(100.0)).divide(summary.monthIncome.max(T(java.math.BigDecimal).ONE), 0, T(java.math.RoundingMode).HALF_UP)}) + '%'"></div></div>
       <div class="chart-legend"><span><i class="legend-income"></i>Received</span><span><i class="legend-expense"></i>Spent</span></div>
       <div class="insight-note"><span class="insight-icon">✳</span><span th:text="${summary.savings.signum() >= 0 ? 'You are spending less than you earn this month.' : 'Your spending is above income this month.'}">You are spending less than you earn this month.</span></div>
     </article>

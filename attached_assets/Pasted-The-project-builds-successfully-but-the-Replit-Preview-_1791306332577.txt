@@ -1,0 +1,48 @@
+The project builds successfully, but the Replit Preview/Webview is not displaying the website.
+
+Please fix the Preview so the Finance Management application opens correctly in the Replit Webview.
+
+Do the following:
+
+1. Start the Spring Boot application correctly.
+2. Make sure the application listens on the correct Replit port, preferably port 8080 or the port provided by the Replit environment.
+3. Make sure the server binds to `0.0.0.0`, not only `localhost` or `127.0.0.1`.
+4. Check the Spring Boot `application.properties` / configuration and fix any incorrect server or port settings.
+5. Check the Replit workflow/run configuration and make sure it starts the correct Maven/Spring Boot application.
+6. Make sure Thymeleaf templates are located correctly and the root route `/` loads a valid page.
+7. Make sure static CSS, JavaScript and other resources are served correctly.
+8. Check the application logs for startup errors, port conflicts, template errors, or missing dependencies and fix them.
+9. Do not change the existing Finance website design or remove any existing features.
+10. Keep the current Java + Spring Boot + Thymeleaf architecture.
+
+After fixing it, actually open/test the application in the Replit Preview/Webview.
+
+Verify these pages/routes work:
+
+* Login
+* Sign Up
+* Dashboard
+* Transactions
+* Budget
+* Reports
+* Profile
+* Settings
+* Logout
+
+Verify the demo account works:
+Email: [viewer@demo.com](mailto:viewer@demo.com)
+Password: viewer123
+
+Also verify that:
+
+* Dashboard loads without errors
+* CSS is visible
+* Navigation works
+* Transactions page loads
+* Budget page loads
+* Reports page loads
+* No 404, 500, template, or connection errors occur
+
+If the Preview is still blank or unavailable, inspect the logs and configuration, identify the exact cause, fix it, restart the workflow, and test the Preview again.
+
+Do not just tell me that the project builds successfully. I need the actual Replit Preview/Webview to display the running website.

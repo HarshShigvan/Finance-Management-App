@@ -18,19 +18,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Finance Management App"
-
-[[workflows.workflow]]
-name = "Finance Management App"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd artifacts/finance-manager && mvn spring-boot:run"
-waitForPort = 8080
-
-[workflows.workflow.metadata]
-outputType = "webview"
+args = "artifacts/folio-finance: web"
 
 [agent]
 stack = "PNPM_WORKSPACE"
