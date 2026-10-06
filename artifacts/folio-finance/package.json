@@ -1,0 +1,10 @@
+{
+  "name": "@workspace/folio-finance",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd ../finance-manager && mvn spring-boot:run",
+    "build": "mvn -f ../finance-manager/pom.xml -DskipTests package",
+    "serve": "java -jar ../finance-manager/target/finance-manager-1.0.0.jar"
+  }
+}

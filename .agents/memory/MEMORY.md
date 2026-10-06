@@ -1,1 +1,2 @@
 - [Java runtime compatibility](java-runtime.md) — target Java 17 with the current GraalVM 19 module.
+- [Spring workflow process cleanup](spring-workflow-cleanup.md) — removing a custom workflow can leave its Maven/JVM child alive and lock file-backed H2.
